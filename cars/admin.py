@@ -10,10 +10,10 @@ class CarAdmin(admin.ModelAdmin):
     
     thumbnail.short_description="Photo"
 
-    list_display=('id','thumbnail','model','year','fuel_type','state','body_style','transmission','passengers','is_featured')
+    list_display=('id','thumbnail','model','year','fuel_type','state','body_style','transmission','passengers','is_featured','price')
     search_fields=('model','year','fuel_type','state','body_style','transmission','passengers')
     list_display_links=('id','thumbnail','model')
-    list_editable=('is_featured',)
+    list_editable=('is_featured','price','transmission')
     list_filter=('body_style','fuel_type','transmission','passengers')
 
 admin.site.register(Car,CarAdmin)
