@@ -53,5 +53,5 @@ def logout(request):
     if request.method=='POST':
         auth.logout(request)
         messages.success(request,'You are successfully logged out !')
-        return redirect('home')
+        return redirect('login')
     return redirect('home')
